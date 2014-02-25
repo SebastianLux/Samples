@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ExtendedMathLib</id>
+    <version>$Version$</version>
+    <title>Extended Math Lib</title>
+    <authors>Sebastian Lux</authors>
+    <owners>Sebastian Lux</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A very cool Math Lib Extension</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="MathLib" version="$Version$" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="$ProjectOutputDir$\ExtendedMathLib.dll" target="lib" />
+    <file src="$ProjectOutputDir$\ExtendedMathLib.pdb" target="lib" />
+  </files>
+</package>
