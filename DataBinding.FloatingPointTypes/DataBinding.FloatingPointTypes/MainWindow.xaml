@@ -1,0 +1,16 @@
+﻿<Window x:Class="DataBinding.FloatingPointTypes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataBinding.FloatingPointTypes"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <StackPanel VerticalAlignment="Center">
+        <TextBox x:Name="floatingPointTypeValueTextBox" Width="200" Height="24"
+                 Text="{Binding FloatingPointTypeValue, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, TargetNullValue={x:Static system:String.Empty}}" />
+        <TextBox TextWrapping="Wrap" HorizontalAlignment="Center"
+                 Text="{Binding (Validation.Errors)[0].ErrorContent, ElementName=floatingPointTypeValueTextBox}" />
+    </StackPanel>
+</Window>
