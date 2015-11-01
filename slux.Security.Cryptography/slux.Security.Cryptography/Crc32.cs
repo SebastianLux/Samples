@@ -11,6 +11,7 @@ namespace slux.Security.Cryptography
     {
         private UInt32 hash;
         private readonly UInt32 polynomial = 0xedb88320;
+        private readonly object syncLock = new object();
         private readonly UInt32[] table;
 
         /// <summary>
@@ -37,7 +38,10 @@ namespace slux.Security.Cryptography
         /// <param name="cbSize">The number of bytes in the byte array to use as data. </param>
         protected override void HashCore(byte[] array, int ibStart, int cbSize)
         {
-            this.hash = Calculate(array, ibStart, cbSize);
+            lock (this.syncLock)
+            {
+                this.hash = Calculate(array, ibStart, cbSize);
+            }
         }
 
         /// <summary>
@@ -48,12 +52,16 @@ namespace slux.Security.Cryptography
         /// </returns>
         protected override byte[] HashFinal()
         {
-            return new byte[] {
-					(byte)((this.hash >> 24) & 0xff),
-					(byte)((this.hash >> 16) & 0xff),
-					(byte)((this.hash >> 8) & 0xff),
-					(byte)(this.hash & 0xff)
-				};
+            lock (this.syncLock)
+            {
+                return new byte[]
+                       {
+                           (byte) ((this.hash >> 24) & 0xff),
+                           (byte) ((this.hash >> 16) & 0xff),
+                           (byte) ((this.hash >> 8) & 0xff),
+                           (byte) (this.hash & 0xff)
+                       };
+            }
         }
 
         /// <summary>
