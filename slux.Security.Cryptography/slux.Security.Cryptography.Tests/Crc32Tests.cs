@@ -12,11 +12,11 @@ namespace slux.Security.Cryptography.Tests
         {
             var crc32 = new Crc32();
 
-            var crc32Result = crc32.ComputeHash(Encoding.Default.GetBytes("00001"));
+            var hash = crc32.ComputeHash(Encoding.Default.GetBytes("00001"));
 
-            var crc32TwoResult = crc32.ComputeHash(Encoding.Default.GetBytes("00010"));
+            var hash2 = crc32.ComputeHash(Encoding.Default.GetBytes("00010"));
 
-            CollectionAssert.AreNotEqual(crc32Result, crc32TwoResult);
+            CollectionAssert.AreNotEqual(hash, hash2);
         }
 
         [TestMethod]
