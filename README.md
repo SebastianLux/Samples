@@ -1,4 +1,1 @@
-Samples
-=======
 
-Sample code
