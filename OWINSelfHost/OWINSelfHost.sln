@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWINSelfHost", "OWINSelfHost\OWINSelfHost.csproj", "{72347E77-B321-44E2-929B-42B90EE02E1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OWINSelfHost.Api", "OWINSelfHost.Api\OWINSelfHost.Api.csproj", "{CA68D77D-CA5A-4730-81F9-7AB30E9A1CED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72347E77-B321-44E2-929B-42B90EE02E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72347E77-B321-44E2-929B-42B90EE02E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72347E77-B321-44E2-929B-42B90EE02E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72347E77-B321-44E2-929B-42B90EE02E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA68D77D-CA5A-4730-81F9-7AB30E9A1CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA68D77D-CA5A-4730-81F9-7AB30E9A1CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA68D77D-CA5A-4730-81F9-7AB30E9A1CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA68D77D-CA5A-4730-81F9-7AB30E9A1CED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
