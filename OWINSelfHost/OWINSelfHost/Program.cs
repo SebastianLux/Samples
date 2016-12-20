@@ -15,13 +15,6 @@ namespace OWINSelfHost
             using (WebApp.Start<Startup>(url: baseAddress))
             {
                 Console.WriteLine("Server started...");
-
-                //var client = new HttpClient();
-
-                //var response = client.GetAsync(baseAddress + "api/v1").Result;
-
-                //Console.WriteLine(response);
-                //Console.WriteLine(response.Content.ReadAsStringAsync().Result); 
                 Console.ReadKey();
             }
         }
